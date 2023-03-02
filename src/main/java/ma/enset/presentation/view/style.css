@@ -1,0 +1,30 @@
+.button{
+    -fx-background-color: #ff7f50;
+}
+.text-field{
+    -fx-background-color: #8772f1;
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-font-family: "Arial Black";
+}
+.text-field:hover{
+    -fx-background-color: #fc936a;
+}
+.root{
+    -fx-background-color: #4158D0;
+    -fx-background-color: linear-gradient(to bottom left, #ff7f50, #6a5acd);
+
+}
+.label{
+    -fx-font-family: "Arial Black";
+}
+.cell:hover{
+    -fx-background-color: #8772f1;
+}
+.cell:hover{
+    -fx-background-color: #ff7f50;
+}
+.combo-box{
+    -fx-background-color: #ff7f50;
+    -fx-border-radius: 10px;
+}

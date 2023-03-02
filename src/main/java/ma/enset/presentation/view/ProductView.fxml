@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.presentation.controller.ProductController">
+   <top>
+      <VBox prefHeight="221.0" prefWidth="858.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="164.0" prefWidth="858.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nom de produit" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Reference" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Prix" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="textnom" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="ref" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="textprix" prefHeight="28.0" prefWidth="412.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <ComboBox fx:id="categorieComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Categorie" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+            <HBox prefHeight="38.0" prefWidth="858.0">
+               <children>
+                  <Label text="Rechercher">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFind">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#addPr" text="Ajouter">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editProduct" text="Editer">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#updateProduct" text="Modifier">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#removeproduct" text="Supprimer">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <center>
+      <TableView fx:id="tableView" prefHeight="439.0" prefWidth="858.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="columnNom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="columnRef" prefWidth="75.0" text="Reference" />
+            <TableColumn fx:id="columnPrix" prefWidth="75.0" text="Prix" />
+            <TableColumn fx:id="columnCat" prefWidth="75.0" text="Categorie" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
